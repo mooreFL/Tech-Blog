@@ -1,6 +1,6 @@
   
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Comment } = require('../../models');
 
 //=========post (all)=========
 router.post('/', async (req, res) => {
@@ -74,23 +74,5 @@ router.post('/', async (req, res) => {
   });
 
 
-  //fix getting the comment 
-  router.put('/blogpost', async (req, res) => {
-    console.log('You are an idiot')
-    try {
-      const comment = await Comment.create( 
-      {
-        comment: req.body.comment,
-      },
-      {
-        where: {
-          post: req.session.post.id,
-        }
-      })
-      res.status(200).json(comment)
-    } catch (err) {
-      
-    }
-  })
-  
+
   module.exports = router;

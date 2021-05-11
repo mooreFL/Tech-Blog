@@ -34,6 +34,23 @@ router.get('/blogpost/:id', async (req, res) => {
   }
 });
 
+  //fix updating the comment 
+  router.put('/comment', async (req, res) => {
+    console.log('You are an idiot')
+    try {
+      console.log(req.body);
+      console.log("Will you still need me, will you still feed me, when I'm 64?")
+      const comment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id
+      })
+      res.status(200).json(comment)
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+  
+
 //=========router (get) login =========
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {

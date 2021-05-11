@@ -1,8 +1,8 @@
 const comment = async (e) => {
   console.log("Clicky");
   e.preventDefault();
-  const userComment = docoment.getElementById("commentInput").value;
-  const response = await fetch("/api/users/update", {
+  const userComment = document.getElementById("commentInput").value;
+  const response = await fetch("/comment", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -15,3 +15,5 @@ const comment = async (e) => {
     alert("Failed to post comment");
   }
 };
+
+document.querySelector('#comment').addEventListener('click', comment);

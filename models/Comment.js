@@ -5,34 +5,34 @@ class Comment extends Model {}
 
 Comment.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
+        // id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     primaryKey: true,
+        //     autoIncrement: true,
+        // },
         comment: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
-        },
-        post_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'blog',
-                key: 'id',
-            },
-        },
+        // date: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false,
+        // },
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'user',
+        //         key: 'id',
+        //     },
+        // },
+        // post_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'blog',
+        //         key: 'id',
+        //     },
+        // },
     },
     {
         sequelize,
