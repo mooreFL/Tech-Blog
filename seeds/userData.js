@@ -4,12 +4,12 @@ const userData = [
     {
         username: 'adamlikesthebeatles',
         email: 'adam@mail.com',
-        password: 'rootroot',
+        password: '$2b$10$F3rcu8eg2UUxyfHIWYMxK.uAZoEDTmXiyS6RmRbLamYkqLF/EN7Va',
     },
     {
         username: 'patty',
         email: 'patrickhhateshandlebars@email.com',
-        password: 'rootroot',
+        password: '$2b$10$F3rcu8eg2UUxyfHIWYMxK.uAZoEDTmXiyS6RmRbLamYkqLF/EN7Va',
     },
 ];
 

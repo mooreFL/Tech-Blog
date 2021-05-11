@@ -1,0 +1,21 @@
+<div id='singlepost'>
+    <div>
+        <h2>{{title}}</h2>
+        <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
+    </div>
+    <section>
+        <p>{{text}}</p>
+    </section>
+
+   
+
+    {{#if loggedIn}}
+    <div id="comment">
+        <h3>Comment</h3>
+        <input type="text" id="commentInput"></input>
+        <button type="submit">Submit</button>
+    </div>
+    {{else}}
+    <p>Please log in to comment</p>
+    {{/if}}
+</div>
