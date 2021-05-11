@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
     }
   });
   
-  //=========router post (logout)=========
+  //=========router post (logout)
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
@@ -73,6 +73,8 @@ router.post('/', async (req, res) => {
     }
   });
 
+
+  //fix getting the comment 
   router.put('/blogpost', async (req, res) => {
     console.log('You are an idiot')
     try {
