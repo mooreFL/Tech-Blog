@@ -34,7 +34,7 @@ router.get('/blogpost/:id', async (req, res) => {
   }
 });
 
-  //fix updating the comment 
+//fix updating the comment 
   router.put('/comment', async (req, res) => {
     console.log('You are an idiot')
     try {

@@ -1,0 +1,27 @@
+:root {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: whitesmoke;
+    padding-top: 40px;
+    padding-left: 35px;
+    padding-bottom: 45px;
+}
+
+
+nav a {
+    font-size: 30px;
+    
+    color: white;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgb(221, 118, 118);
+}
+
+div a {
+    color: white;
+}
+
+body {
+    background-color: lightseagreen;
+}
