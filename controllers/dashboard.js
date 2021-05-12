@@ -1,22 +1,24 @@
 const router = require('express').Router();
 const { User, Blog, Comment } = require('../models');
 
-//=========router (get)=========
-router.get('/', async (req, res) => {
-    try {
-        const blogData = await Blog.findAll({
-            include: [User],
-        });
-        const blogs = blogData.map((blog) => blog.get({ plain: true}));
-        console.log(blogs);
-       res.render('home', {
-           blogs
-       }); 
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+// // =========router (get) blogs for dashboard=========
+// //change to reflect list of blog posts
+// router.get('/dashboard', async (req, res) => {
+//     try {
+//         const blogData = await Blog.findAll({
+//             include: [User],
+//         });
+//         const blogs = blogData.map((blog) => blog.get({ plain: true}));
+//         console.log(blogs);
+//         //render to blogpost handlebars
+//        res.render('blogpost', {
+//            blogs,
+//        }); 
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
 
 //==========get blogpost by id=========
 //is the below correct?? Ask tutor

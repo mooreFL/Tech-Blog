@@ -19,6 +19,25 @@ router.get('/', async (req, res) => {
     }
 });
 
+// =========router (get) blogs for dashboard=========
+//change to reflect list of blog posts
+router.get('/dashboard', async (req, res) => {
+  try {
+      const blogData = await Blog.findAll({
+          include: [User],
+      });
+      const blogs = blogData.map((blog) => blog.get({ plain: true}));
+      console.log(blogs);
+      //render to blogpost handlebars
+     res.render('blogpost', {
+         blogs,
+     }); 
+  } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+  }
+});
+
 //=========router get blogpost by id=========
 router.get('/blogpost/:id', async (req, res) => {
   try {
